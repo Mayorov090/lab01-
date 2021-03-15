@@ -56,9 +56,7 @@ Mayorov/workspace/reports/lab01/REPORT.md
 команды:
 sudo apt install libicu-dev
 ./bootstrap.sh --prefix=boost_output
-./bootstrap.sh --prefix=boost_output --with-icu=
 ./b2 install
-./b2 install -j 8
 ```
 ```
 9)Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию ~/boost-libs.
