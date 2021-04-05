@@ -77,7 +77,7 @@ result:
 ```
 ```
 10)Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
-command: du -a -h //du
+command: ncdu
 result:
  4.4 MiB [##########]  libboost_wave.a                                       
     4.2 MiB [######### ]  libboost_log.a
