@@ -74,8 +74,8 @@ result:
 1.6G	//snap
 8.9G	//
 
-``
-``
+```
+```
 10)Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
 command: du -a -h //du
 result:
@@ -86,8 +86,8 @@ result:
     3.0 MiB [######    ]  libboost_math_tr1l.a
     3.0 MiB [######    ]  libboost_math_tr1f.a
     2.9 MiB [######    ]  libboost_regex.a
-``
-``
+```
+```
 11)Найдите топ10 самых "тяжёлых".
 command: du -ah | sort -rh | head -10 
 result:
@@ -101,7 +101,7 @@ result:
 3.0M	./libboost_math_tr1f.a
 2.6M	./libboost_log_setup.a
 2.4M	./libboost_test_exec_monitor.a
-``
+```
 
 
 
