@@ -56,13 +56,52 @@ Mayorov/workspace/reports/lab01/REPORT.md
 команды:
 sudo apt install libicu-dev
 ./bootstrap.sh --prefix=boost_output
-./b2 install
+./b2 install -j 8
 ```
 ```
 9)Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию ~/boost-libs.
 
 команды:
+mkdir -p ./boost-libs
+mv ~/boost_1_69_0/boost_output/lib/* ~/boost-libs/
+result:
+0	//snap/core18/1885/var/spool
+0	//snap/core18/1885/var/tmp
+143K	//snap/core18/1885/var
+0	//snap/core18/1885/writable
+169M	//snap/core18/1885
+169M	//snap/core18
+1.6G	//snap
+8.9G	//
 
+``
+``
+10)Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
+command: du -a -h //du
+result:
+ 4.4 MiB [##########]  libboost_wave.a                                       
+    4.2 MiB [######### ]  libboost_log.a
+    3.3 MiB [#######   ]  libboost_locale.a
+    3.0 MiB [######    ]  libboost_math_tr1.a
+    3.0 MiB [######    ]  libboost_math_tr1l.a
+    3.0 MiB [######    ]  libboost_math_tr1f.a
+    2.9 MiB [######    ]  libboost_regex.a
+``
+``
+11)Найдите топ10 самых "тяжёлых".
+command: du -ah | sort -rh | head -10 
+result:
+52M	.
+4.4M	./libboost_wave.a
+4.3M	./libboost_log.a
+3.4M	./libboost_locale.a
+3.1M	./libboost_math_tr1l.a
+3.1M	./libboost_math_tr1.a
+3.0M	./libboost_regex.a
+3.0M	./libboost_math_tr1f.a
+2.6M	./libboost_log_setup.a
+2.4M	./libboost_test_exec_monitor.a
+``
 
 
 
